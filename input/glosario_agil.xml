@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glosario>
+  <title>Título</title>
+  <author>Autor</author>
+  <term>
+    <name>Empirismo</name>
+    <definition>En el marco de Scrum, el empirismo es un enfoque que se basa en la obtención de conocimiento a través de experiencias prácticas y evidencia empírica. Este enfoque enfatiza la importancia de los ciclos de retroalimentación, que incluyen transparencia, revisión constante y ajustes rápidos.</definition>
+    <examples>
+      <example>La inspección y adaptación en las reuniones diarias de Scrum.</example>
+      <example>La revisión del incremento en la reunión de revisión del sprint.</example>
+      <example>La retrospectiva del sprint para identificar mejoras en el proceso.</example>
+    </examples>
+  </term>
+  <term>
+    <name>Épicas</name>
+    <definition>Las épicas son historias de usuario de gran tamaño que no se pueden completar en un solo sprint. Estas historias suelen dividirse en historias de usuario más pequeñas y manejables, que se pueden implementar en un solo sprint.</definition>
+    <examples>
+      <example>Desarrollar un sistema de autenticación para la aplicación.</example>
+      <example>Implementar un motor de recomendaciones personalizadas.</example>
+      <example>Crear una interfaz de administración para la plataforma.</example>
+    </examples>
+  </term>
+  <term>
+    <name>Historias de usuario (User Stories)</name>
+    <definition>En Scrum, las historias de usuario son relatos breves y precisos que describen una funcionalidad desde la óptica del usuario final. Estas historias buscan captar las necesidades y expectativas del usuario, guiando a los equipos para crear soluciones que se alineen con esos objetivos.</definition>
+    <examples>
+      <example>Una historia de usuario podría ser: 'Como estudiante de un curso en línea, quiero recibir notificaciones de nuevas lecciones para mantenerme al día con el contenido'.Otra historia de usuario podría ser: 'Como administrador de la plataforma, quiero poder generar reportes de uso para analizar el desempeño de los cursos'.</example>
+    </examples>
+  </term>
+  <term>
+    <name>Tareas (Tasks)</name>
+    <definition>Las tareas son actividades específicas que deben realizarse para completar una historia de usuario. Estas actividades se dividen en subtareas más pequeñas, permitiendo a los equipos de desarrollo planificar y ejecutar el trabajo de manera eficiente.</definition>
+    <examples>
+      <example>Diseñar la interfaz de usuario.</example>
+      <example>Implementar la lógica de negocio.</example>
+      <example>Realizar pruebas de integración.</example>
+    </examples>
+  </term>
+  <term>
+    <name>Tablero de Tareas (Task Board)</name>
+    <definition>El tablero de tareas es una herramienta visual que se utiliza para gestionar y monitorear el progreso de las historias de usuario y tareas en un sprint. Este tablero suele dividirse en columnas que representan los estados de las tareas, como 'Por hacer' (To Do), 'En progreso' (In Progress) y 'Terminado' (Done).También se utiliza para identificar cuellos de botella y facilitar la colaboración entre los miembros del equipo.</definition>
+    <examples>
+      <example>Una columna 'Por hacer' para las tareas pendientes.</example>
+      <example>Una columna 'En progreso' para las tareas en desarrollo.</example>
+      <example>Una columna 'Terminado' para las tareas completadas.</example>
+    </examples>
+  </term>
+  <term>
+    <name>INVEST</name>
+    <definition>INVEST es un acrónimo que describe las características de una historia de usuario bien definida. Estas características son: Independiente, Negociable, Valiosa, Estimable, Pequeña y Testeable. Las historias de usuario que cumplen con estos criterios suelen ser más fáciles de entender, implementar y probar.</definition>
+    <examples>
+      <example>Una historia de usuario que pueda ser implementada de forma independiente de otras.</example>
+      <example>Una historia de usuario que pueda ser negociada con el cliente para ajustar los requisitos.</example>
+      <example>Una historia de usuario que aporte valor al usuario final.</example>
+    </examples>
+  </term>
+  <term>
+    <name>Planning Poker</name>
+    <definition>El Planning Poker es una técnica utilizada en Scrum para estimar el esfuerzo y la complejidad de las historias de usuario. En esta técnica, los miembros del equipo asignan puntos de historia a cada historia, basándose en su percepción de la dificultad y el trabajo requerido.</definition>
+    <examples>
+      <example>Asignar 1 punto a una historia de usuario muy sencilla.</example>
+      <example>Asignar 5 puntos a una historia de usuario de complejidad media.</example>
+      <example>Asignar 13 puntos a una historia de usuario muy compleja.</example>
+    </examples>
+  </term>
+  <term>
+    <name>Kanban</name>
+    <definition>Kanban es un marco de trabajo ágil que se centra en la visualización y optimización del flujo de trabajo. Este marco utiliza tableros Kanban para representar las tareas y actividades en diferentes columnas, lo que permite a los equipos gestionar y mejorar su productividad.</definition>
+    <examples>
+      <example>Un tablero Kanban con columnas 'Por hacer', 'En progreso' y 'Terminado'.</example>
+      <example>Limitar el trabajo en progreso para evitar la sobrecarga de tareas.</example>
+      <example>Utilizar métricas como el lead time y el throughput para mejorar el rendimiento del equipo.</example>
+    </examples>
+  </term>
+  <term>
+    <name>PMV (Producto Mínimo Viable)</name>
+    <definition>El Producto Mínimo Viable es una versión simplificada de un producto que incluye solo las características esenciales para satisfacer las necesidades del usuario. Este enfoque permite a los equipos lanzar rápidamente un producto al mercado, obtener retroalimentación y validar su propuesta de valor.</definition>
+    <examples>
+      <example>Lanzar una versión beta de una aplicación con las funciones básicas.</example>
+      <example>Crear un prototipo funcional para validar la idea del producto.</example>
+      <example>Implementar una característica clave para evaluar la aceptación del mercado.</example>
+    </examples>
+  </term>
+  <term>
+    <name>sadas</name>
+    <definition>dsadsad</definition>
+    <examples>
+      <example>asdasd</example>
+    </examples>
+  </term>
+</glosario>
