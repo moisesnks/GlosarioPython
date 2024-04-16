@@ -39,7 +39,7 @@ Esta aplicación es un glosario interactivo para gestionar y visualizar término
 4. Ejecuta la aplicación con el siguiente comando:
 
     ```shell
-    python nombre_del_script.py
+    python app.py
     ```
 
 ## Notas
