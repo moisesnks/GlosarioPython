@@ -4,18 +4,24 @@ from PyQt5.QtCore import Qt
 
 import glosario_manager
 from export_manager import ExportManager
+from utils import load_settings
+
+
 
 class GlossaryApp(QMainWindow):
     def __init__(self):
         super().__init__()
 
         # Configura el título y tamaño de la ventana
-        self.setWindowTitle("Glosario de Términos Ágiles")
+        self.setWindowTitle("Glosario by @moisenks")
         self.setGeometry(100, 100, 800, 600)
 
         # Cargar glosario desde el archivo XML
         self.glossary_manager = glosario_manager.GlossaryManager()
         self.glossary_manager.load_glossary("input/glosario_agil.xml")
+
+        # Cargar la configuración del archivo settings.ini
+        load_settings(self)
 
         # Crear una instancia de ExportManager
         self.export_manager = ExportManager(self.glossary_manager)
@@ -40,6 +46,34 @@ class GlossaryApp(QMainWindow):
         self.definition_edit.textChanged.connect(self.update_preview)
         self.examples_edit.textChanged.connect(self.update_preview)
 
+    def export_to_latex(self):
+        success, message = self.export_manager.export_to_latex(self.author, self.title, f"output/{self.title}.tex")
+        if success:
+            QMessageBox.information(self, "Exportación Exitosa", message)
+        else:
+            QMessageBox.critical(self, "Error de Exportación", message)
+
+    def export_to_md(self):
+        success, message = self.export_manager.export_to_md(self.author, self.title, f"output/{self.title}.md")
+        if success:
+            QMessageBox.information(self, "Exportación Exitosa", message)
+        else:
+            QMessageBox.critical(self, "Error de Exportación", message)
+
+    def export_to_html(self):
+        success, message = self.export_manager.export_to_html(self.author, self.title, f"output/{self.title}.html")
+        if success:
+            QMessageBox.information(self, "Exportación Exitosa", message)
+        else:
+            QMessageBox.critical(self, "Error de Exportación", message)
+
+    def export_to_docx(self):
+        success, message = self.export_manager.export_to_docx(self.author, self.title, "output/")
+        if success:
+            QMessageBox.information(self, "Exportación Exitosa", message)
+        else:
+            QMessageBox.critical(self, "Error de Exportación", message)
+
     def setup_menu(self):
         """Configura la barra de menú."""
         menu_bar = self.menuBar()
@@ -52,10 +86,10 @@ class GlossaryApp(QMainWindow):
         export_to_docx = QAction("Exportar a Word", self)
 
         # Conectar acciones con funciones del ExportManager
-        export_to_latex.triggered.connect(lambda: self.export_manager.export_to_latex("Autor", "Título", "output/glosario_agil.tex"))
-        export_to_md.triggered.connect(lambda: self.export_manager.export_to_md("Autor", "Título", "output/glosario_agil.md"))
-        export_to_html.triggered.connect(lambda: self.export_manager.export_to_html("Autor", "Título", "output/glosario_agil.html"))
-        export_to_docx.triggered.connect(lambda: self.export_manager.export_to_docx("Autor", "Título", "output/glosario_agil.docx"))
+        export_to_latex.triggered.connect(self.export_to_latex)
+        export_to_md.triggered.connect(self.export_to_md)
+        export_to_html.triggered.connect(self.export_to_html)
+        export_to_docx.triggered.connect(self.export_to_docx)
 
         # Agregar acciones al menú
         export_menu.addAction(export_to_latex)
