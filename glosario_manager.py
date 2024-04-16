@@ -156,6 +156,7 @@ if __name__ == "__main__":
     to_md = glossary_manager.to_md("Moisés Leiva", "Glosario de Términos Ágiles")
     to_xml = glossary_manager.to_xml("Moisés Leiva", "Glosario de Términos Ágiles")
 
+
     # guardar latex, html, md y xml en /output/
     with open("output/glosario.tex", "w", encoding="utf-8") as file:
         file.write(to_latex)
@@ -168,3 +169,6 @@ if __name__ == "__main__":
 
     with open("output/glosario.xml", "w", encoding="utf-8") as file:
         file.write(to_xml)
+
+    # Guardar en docx
+    glossary_manager.to_docx("Moisés Leiva", "Glosario de Términos Ágiles", "output/")
