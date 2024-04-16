@@ -148,32 +148,23 @@ class GlossaryManager:
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    glossary = {
-        "Python": {
-            "definicion": "Lenguaje de programación interpretado.",
-            "ejemplos": ["print('Hola, mundo!')", "x = 42"]
-        },
-        "Java": {
-            "definicion": "Lenguaje de programación compilado.",
-            "ejemplos": ["System.out.println('Hola, mundo!');", "int x = 42;"]
-        }
-    }
+    glossary_manager = GlossaryManager()
+    glossary_manager.load_glossary("input/glosario_agil.xml")
 
-    gm = GlossaryManager(glossary)
-    latex_document = gm.to_latex("John Doe", "Glosario de programación")
-    print(latex_document)
+    to_latex = glossary_manager.to_latex("Moisés Leiva", "Glosario de Términos Ágiles")
+    to_html = glossary_manager.to_html("Moisés Leiva", "Glosario de Términos Ágiles")
+    to_md = glossary_manager.to_md("Moisés Leiva", "Glosario de Términos Ágiles")
+    to_xml = glossary_manager.to_xml("Moisés Leiva", "Glosario de Términos Ágiles")
 
-    md_document = gm.to_md("John Doe", "Glosario de programación")
-    print(md_document)
+    # guardar latex, html, md y xml en /output/
+    with open("output/glosario.tex", "w", encoding="utf-8") as file:
+        file.write(to_latex)
 
-    html_document = gm.to_html("John Doe", "Glosario de programación")
-    print(html_document)
+    with open("output/glosario.html", "w", encoding="utf-8") as file:
+        file.write(to_html)
 
-    docx_filename = gm.to_docx("John Doe", "Glosario de programación", "output/")
-    print(docx_filename)
+    with open("output/glosario.md", "w", encoding="utf-8") as file:
+        file.write(to_md)
 
-    xml_document = gm.to_xml("John Doe", "Glosario de programación")
-    print(xml_document)
-
-    gm.from_xml("output/Glosario de programación.xml")
-    print(gm.glosario)
+    with open("output/glosario.xml", "w", encoding="utf-8") as file:
+        file.write(to_xml)
