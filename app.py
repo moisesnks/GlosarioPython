@@ -285,6 +285,8 @@ class GlossaryApp(QMainWindow):
                 self.definition_edit.clear()
                 self.examples_edit.clear()
                 self.text_browser.clear()
+                # Sobreescribe el XML
+                self.glossary_manager.save_glossary("input/glosario_agil.xml")
                 QMessageBox.information(self, "Éxito", "El término ha sido borrado.")
 
     def sort_terms_asc(self):

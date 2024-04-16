@@ -90,11 +90,3 @@ Autor: Moisés Leiva
 - Crear un prototipo funcional para validar la idea del producto.
 - Implementar una característica clave para evaluar la aceptación del mercado.
 
-## sadas
-
-**Definición:** dsadsad
-
-**Ejemplos:**
-
-- asdasd
-
